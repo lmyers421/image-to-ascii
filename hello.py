@@ -3,6 +3,7 @@ from PIL import Image
 file = open("lebron.txt", "w")
 
 img = Image.open("lebron.png")
+img = img.convert("RGB")
 
 w = img.width
 h = img.height
