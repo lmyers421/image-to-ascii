@@ -13,22 +13,21 @@ for y in range(h):
         px = img.getpixel([x,y])
         bright = px[0] + px[1] + px[2]
         if bright == 0:
-            file.write("#")
+            file.write("@")
         elif bright < 100:
-            file.write("X")
-        elif bright < 200:
             file.write("%")
+        elif bright < 200:
+            file.write("X")
         elif bright < 300:
-            file.write("&")
+            file.write("k")
         elif bright < 400:
-            file.write("*")
+            file.write("l")
         elif bright < 500:
-            file.write("+")
-        elif bright < 600:
             file.write("/")
+        elif bright < 600:
+            file.write(";")
         elif bright < 700:
-            file.write("(")
-        else:
             file.write("'")
+        else:
+            file.write("`")
     file.write("\n")
-
